@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HB_ATTENDANCE</title>
+    <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+    <!-- thalaippu -->
+    <div id="head">
+        <h1 id="header">TEAM MIT ATTENDANCE SHEET</h1>
+        <img src="handball.png" alt="dash-board" id="dash-board" onclick="toggleDashboard()">
+    </div>
+
+    <!-- dsh board pahh -->
+    <div id="dashboard-panel">
+        <h2>Dashboard</h2>
+        <p>Total Players: <span id="total-count">0</span></p>
+        <p>Present: <span id="present-count">0</span></p>
+        <p>Absent: <span id="absent-count">0</span></p>
+    </div>
+
+    <!-- players peyar ezhudhum idam -->
+    <div id="input-box">
+        <label for="new-player">Name:</label>
+        <input type="text" id="new-player" placeholder="Enter player name">
+        <button onclick="addPlayer()">Add</button>
+    </div>
+
+    <!-- ullen iya -->
+    <div id="attendance-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Player Name</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+
+        <!-- inaiku enna thediiii.....? -->
+    </div>
+    <div id="date-picker">
+    <label for="attendance-date">Select Date: </label>
+    <input type="date" id="attendance-date" onchange="changeDate()" />
+</div>
+
+
+    <script src="attendance.js"></script>
+</body>
+</html>
